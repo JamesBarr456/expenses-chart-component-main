@@ -1,43 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Expenses chart component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="./css/main.css">
 </head>
+
 <body>
+  <div class="container">
+    <div class="header">
+      <div class="header__balance">
+        <h2 class="title">My Balance</h2>
+        <p>$921.48</p>
+      </div>
+      <img src="./images/logo.svg" alt="logo">
+    </div>
 
-  My balance
-  $921.48
+    <main>
+      <h1>Spending - Last 7 days</h1>
+      <div class="graphic">
+        <div class="barras">
+          <p class="barras__amount"></p>
+          <div class="barras__barra"></div>
+          <span class="barras__day"></span>
+        </div>
+        <div class="barras">
+          <p class="barras__amount"></p>
+          <div class="barras__barra"></div>
+          <span  class="barras__day"></span>
+        </div>
+        <div class="barras">
+          <p class="barras__amount"></p>
+          <div class="barras__barra"></div>
+          <span  class="barras__day"></span>
+        </div>
+        <div class="barras">
+          <p class="barras__amount"></p>
+          <div class="barras__barra"></div>
+          <span  class="barras__day"></span>
+        </div>
+        <div class="barras">
+          <p class="barras__amount"></p>
+          <div class="barras__barra"></div>
+          <span  class="barras__day"></span>
+        </div>
+        <div class="barras">
+          <p class="barras__amount"></p>
+          <div class="barras__barra"></div>
+          <span  class="barras__day"></span>
+        </div>
+        <div class="barras">
+          <p class="barras__amount"></p>
+          <div class="barras__barra"></div>
+          <span  class="barras__day"></span>
+        </div>
 
-  Spending - Last 7 days
-
-  mon
-  tue
-  wed
-  thu
-  fri
-  sat
-  sun
-
-  Total this month
-  $478.33
-
-  +2.4%
-  from last month
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+      </div>
+      <div class="footer">
+        <div class="footer__total">
+          <h2 class="title title--medium-brown">Total this month</h2>
+          <p>$478.33</p>
+        </div>
+        <div class="footer__lastmonth">
+          <p>+2.4%</p>
+          <h2 class="title title--medium-brown">from last month</h2>
+        </div>
+      </div>
   </div>
+  </div>
+  <script type="module" src="./script.js"></script>
 </body>
+
 </html>

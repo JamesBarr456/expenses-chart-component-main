@@ -1,0 +1,155 @@
+@import "./colors";
+@import "./font";
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $Very-pale-orange;
+
+}
+
+.title {
+    font-size: 16px;
+    font-family: $font-regular;
+    font-weight: 400;
+
+    &--medium-brown {
+        color: $Medium-brown;
+    }
+}
+
+p {
+    font-family: $font-bold;
+    font-weight: 700;
+}
+
+.container {
+    width: 542px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: $Soft-red;
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 25px;
+    color: $Cream;
+
+    &__balance {
+        
+        p {
+            font-size: 27px;
+            margin-top: 15px;
+        }
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px;
+
+    h1 {
+        font-family: $font-bold;
+        font-weight: 700;
+        color: $Dark-brown;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 35px;
+
+        &__total {
+            p {
+                font-size: 40px;
+                color: $Dark-brown;
+            }
+        }
+
+        &__lastmonth {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding-bottom: 5px;
+
+            p {
+                color: $Dark-brown;
+                text-align: end;
+            }
+
+        }
+    }
+}
+
+.graphic {
+    display: flex;
+    justify-content: space-around;
+    color: $Medium-brown;
+    border-bottom: 1px solid $Cream;
+    text-align: center;
+    margin-top: 20px;
+    padding-bottom: 20px;
+
+    .barras{ 
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+
+        &__amount{
+            opacity: 0;
+            padding: 5px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            color:white;
+            background-color: black;
+
+            &-activo{
+                opacity: 1;
+                transform: scale(1.2);
+            }
+        }
+        &__barra {
+            cursor: pointer;
+            width: 70%;
+            height: 0;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            background-color: $Soft-red;
+            transition: height 2.5s ease-in-out;
+
+            &:hover {
+                background-color: lighten($Soft-red, 20%);
+
+            }
+
+            &--dayActual {
+                background-color: $Cyan;
+
+                &:hover{
+                    background-color: lighten($Cyan, 20%);
+                }
+            }
+
+            
+        }
+       
+    }
+
+}

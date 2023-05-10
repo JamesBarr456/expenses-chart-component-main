@@ -1,0 +1,138 @@
+/* Neutral */
+/* --------         -------- */
+/* -------- Fuentes -------- */
+@font-face {
+  font-family: "DMSans-Regular";
+  src: url(../font/DMSans-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "DMSans-Bold";
+  src: url(../font/DMSans-Bold.ttf);
+  font-weight: 700;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(33, 100%, 98%);
+}
+
+.title {
+  font-size: 16px;
+  font-family: "DMSans-Regular";
+  font-weight: 400;
+}
+.title--medium-brown {
+  color: hsl(28, 10%, 53%);
+}
+
+p {
+  font-family: "DMSans-Bold";
+  font-weight: 700;
+}
+
+.container {
+  width: 542px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: hsl(10, 79%, 65%);
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 25px;
+  color: hsl(27, 66%, 92%);
+}
+.header__balance p {
+  font-size: 27px;
+  margin-top: 15px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 20px;
+  padding: 30px;
+}
+main h1 {
+  font-family: "DMSans-Bold";
+  font-weight: 700;
+  color: hsl(25, 47%, 15%);
+}
+main .footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 35px;
+}
+main .footer__total p {
+  font-size: 40px;
+  color: hsl(25, 47%, 15%);
+}
+main .footer__lastmonth {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 5px;
+}
+main .footer__lastmonth p {
+  color: hsl(25, 47%, 15%);
+  text-align: end;
+}
+
+.graphic {
+  display: flex;
+  justify-content: space-around;
+  color: hsl(28, 10%, 53%);
+  border-bottom: 1px solid hsl(27, 66%, 92%);
+  text-align: center;
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+.graphic .barras {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+.graphic .barras__amount {
+  opacity: 0;
+  padding: 5px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  color: white;
+  background-color: black;
+}
+.graphic .barras__amount-activo {
+  opacity: 1;
+  transform: scale(1.2);
+}
+.graphic .barras__barra {
+  cursor: pointer;
+  width: 70%;
+  height: 0;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: hsl(10, 79%, 65%);
+  transition: height 2.5s ease-in-out;
+}
+.graphic .barras__barra:hover {
+  background-color: #f7c5bb;
+}
+.graphic .barras__barra--dayActual {
+  background-color: hsl(186, 34%, 60%);
+}
+.graphic .barras__barra--dayActual:hover {
+  background-color: #bbdadd;
+}
+
+/*# sourceMappingURL=main.css.map */
