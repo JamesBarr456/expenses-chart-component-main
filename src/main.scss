@@ -7,6 +7,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 18px;
     
 }
 
@@ -21,7 +22,7 @@ body {
 }
 
 .title {
-    font-size: 16px;
+    font-size: 0.8888rem;
     font-family: $font-regular;
     font-weight: 400;
 
@@ -43,16 +44,16 @@ p {
     display: flex;
     justify-content: space-between;
     background-color: $Soft-red;
-    border-radius: 20px;
-    padding: 30px;
-    margin-bottom: 25px;
+    border-radius: 1.111rem;
+    padding: 1.6666rem;
+    margin-bottom: 1.3888rem;
     color: $Cream;
 
     &__balance {
         
         p {
-            font-size: 27px;
-            margin-top: 15px;
+            font-size: 1.5rem;
+            margin-top: 0.8333rem;
         }
     }
 }
@@ -61,10 +62,11 @@ main {
     display: flex;
     flex-direction: column;
     background-color: white;
-    border-radius: 20px;
-    padding: 30px;
+    border-radius: 1.1111rem;
+    padding: 1.6666rem;
 
     h1 {
+        font-size: 2.3333rem;
         font-family: $font-bold;
         font-weight: 700;
         color: $Dark-brown;
@@ -73,11 +75,11 @@ main {
     .footer {
         display: flex;
         justify-content: space-between;
-        margin-top: 35px;
+        margin-top: 1.95rem;
 
         &__total {
             p {
-                font-size: 40px;
+                font-size: 2.2222rem;
                 color: $Dark-brown;
             }
         }
@@ -86,7 +88,7 @@ main {
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
-            padding-bottom: 5px;
+            padding-bottom: 0.27777rem;
 
             p {
                 color: $Dark-brown;
@@ -103,8 +105,8 @@ main {
     color: $Medium-brown;
     border-bottom: 1px solid $Cream;
     text-align: center;
-    margin-top: 20px;
-    padding-bottom: 20px;
+    margin-top: 1.111rem;
+    padding-bottom: 1.111rem;
 
     .barras{ 
         display: flex;
@@ -114,9 +116,9 @@ main {
 
         &__amount{
             opacity: 0;
-            padding: 5px;
-            margin-bottom: 15px;
-            border-radius: 5px;
+            padding: 0.27777rem;
+            margin-bottom: 0.8333rem;
+            border-radius: 0.2777rem;
             color:white;
             background-color: black;
 
@@ -127,24 +129,44 @@ main {
         }
         &__barra {
             cursor: pointer;
+            position: relative;
             width: 70%;
-            height: 0;
-            border-radius: 5px;
-            margin-bottom: 10px;
-            background-color: $Soft-red;
-            transition: height 2.5s ease-in-out;
+            border-radius: 0.2777rem;
+            overflow: hidden;
+            margin-bottom: 0.5555rem;
 
-            &:hover {
+            &:hover::before{
+                position: absolute;
+                z-index: 100 ;
                 background-color: lighten($Soft-red, 20%);
-
+            }
+            
+            &::before{
+                content:"";
+                position: absolute;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: $Soft-red;
+                transform: translateY(100%);
+                animation: fill-bar 0.8s 0.3s ease-in-out forwards;
             }
 
-            &--dayActual {
-                background-color: $Cyan;
+            &--dayActual:hover::before{
+                position: absolute;
+                z-index: 100 ;
+                background-color: lighten($Cyan, 20%);
+            }
 
-                &:hover{
-                    background-color: lighten($Cyan, 20%);
-                }
+            &--dayActual::before {
+                background-color: $Cyan;
+                content:"";
+                position: absolute;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                transform: translateY(100%);
+                animation: fill-bar 0.8s 0.3s ease-in-out forwards;
             }
 
             
@@ -152,4 +174,22 @@ main {
        
     }
 
+}
+
+@media only screen and (min-width:360px) and (max-width: 768px) {
+
+    * {
+        font-size: 12px;
+    }
+
+    .container {
+        width: 342px;
+    }
+}
+
+
+@keyframes fill-bar {
+    to {
+        transform: translateY(0%);
+    }
 }

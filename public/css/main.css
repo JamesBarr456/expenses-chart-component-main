@@ -15,6 +15,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 18px;
 }
 
 body {
@@ -26,7 +27,7 @@ body {
 }
 
 .title {
-  font-size: 16px;
+  font-size: 0.8888rem;
   font-family: "DMSans-Regular";
   font-weight: 400;
 }
@@ -47,24 +48,25 @@ p {
   display: flex;
   justify-content: space-between;
   background-color: hsl(10, 79%, 65%);
-  border-radius: 20px;
-  padding: 30px;
-  margin-bottom: 25px;
+  border-radius: 1.111rem;
+  padding: 1.6666rem;
+  margin-bottom: 1.3888rem;
   color: hsl(27, 66%, 92%);
 }
 .header__balance p {
-  font-size: 27px;
-  margin-top: 15px;
+  font-size: 1.5rem;
+  margin-top: 0.8333rem;
 }
 
 main {
   display: flex;
   flex-direction: column;
   background-color: white;
-  border-radius: 20px;
-  padding: 30px;
+  border-radius: 1.1111rem;
+  padding: 1.6666rem;
 }
 main h1 {
+  font-size: 2.3333rem;
   font-family: "DMSans-Bold";
   font-weight: 700;
   color: hsl(25, 47%, 15%);
@@ -72,17 +74,17 @@ main h1 {
 main .footer {
   display: flex;
   justify-content: space-between;
-  margin-top: 35px;
+  margin-top: 1.95rem;
 }
 main .footer__total p {
-  font-size: 40px;
+  font-size: 2.2222rem;
   color: hsl(25, 47%, 15%);
 }
 main .footer__lastmonth {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding-bottom: 5px;
+  padding-bottom: 0.27777rem;
 }
 main .footer__lastmonth p {
   color: hsl(25, 47%, 15%);
@@ -95,8 +97,8 @@ main .footer__lastmonth p {
   color: hsl(28, 10%, 53%);
   border-bottom: 1px solid hsl(27, 66%, 92%);
   text-align: center;
-  margin-top: 20px;
-  padding-bottom: 20px;
+  margin-top: 1.111rem;
+  padding-bottom: 1.111rem;
 }
 .graphic .barras {
   display: flex;
@@ -106,9 +108,9 @@ main .footer__lastmonth p {
 }
 .graphic .barras__amount {
   opacity: 0;
-  padding: 5px;
-  margin-bottom: 15px;
-  border-radius: 5px;
+  padding: 0.27777rem;
+  margin-bottom: 0.8333rem;
+  border-radius: 0.2777rem;
   color: white;
   background-color: black;
 }
@@ -118,21 +120,55 @@ main .footer__lastmonth p {
 }
 .graphic .barras__barra {
   cursor: pointer;
+  position: relative;
   width: 70%;
-  height: 0;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  background-color: hsl(10, 79%, 65%);
-  transition: height 2.5s ease-in-out;
+  border-radius: 0.2777rem;
+  overflow: hidden;
+  margin-bottom: 0.5555rem;
 }
-.graphic .barras__barra:hover {
+.graphic .barras__barra:hover::before {
+  position: absolute;
+  z-index: 100;
   background-color: #f7c5bb;
 }
-.graphic .barras__barra--dayActual {
-  background-color: hsl(186, 34%, 60%);
+.graphic .barras__barra::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: hsl(10, 79%, 65%);
+  transform: translateY(100%);
+  animation: fill-bar 0.8s 0.3s ease-in-out forwards;
 }
-.graphic .barras__barra--dayActual:hover {
+.graphic .barras__barra--dayActual:hover::before {
+  position: absolute;
+  z-index: 100;
   background-color: #bbdadd;
+}
+.graphic .barras__barra--dayActual::before {
+  background-color: hsl(186, 34%, 60%);
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  animation: fill-bar 0.8s 0.3s ease-in-out forwards;
+}
+
+@media only screen and (min-width: 360px) and (max-width: 768px) {
+  * {
+    font-size: 12px;
+  }
+  .container {
+    width: 342px;
+  }
+}
+@keyframes fill-bar {
+  to {
+    transform: translateY(0%);
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
