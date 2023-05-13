@@ -1,106 +1,86 @@
-@import "./colors";
-@import "./font";
+@import "./initial";
+@import "./variables";
 
-
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-size: 18px;
-    
-}
-
-
-body {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $Very-pale-orange;
-
-}
-
-.title {
-    font-size: 0.8888rem;
-    font-family: $font-regular;
-    font-weight: 400;
-
-    &--medium-brown {
-        color: $Medium-brown;
-    }
-}
-
-p {
-    font-family: $font-bold;
-    font-weight: 700;
-}
 
 .container {
     width: 542px;
 }
 
-.header {
+.balance {
     display: flex;
     justify-content: space-between;
+    padding: 1.3rem;
     background-color: $Soft-red;
-    border-radius: 1.111rem;
-    padding: 1.6666rem;
-    margin-bottom: 1.3888rem;
-    color: $Cream;
+    border-radius: 0.555rem;
+    margin-bottom: 1.388rem;
 
-    &__balance {
-        
-        p {
-            font-size: 1.5rem;
-            margin-top: 0.8333rem;
-        }
+    &__title {
+        color: $Very-pale-orange;
+        font-size: 0.9rem;
+    }
+
+    &__total {
+        color: $Very-pale-orange;
+        font-size: 1.7rem;
+        margin-top: 0.833rem;
+        font-weight: 700;
+    }
+
+    &__logo {
+        width: 4rem;
     }
 }
 
-main {
+.chart {
     display: flex;
     flex-direction: column;
+    padding: 1.4rem;
+    color: $Medium-brown;
+    border-radius: 1.111rem;
     background-color: white;
-    border-radius: 1.1111rem;
-    padding: 1.6666rem;
 
-    h1 {
-        font-size: 2.3333rem;
-        font-family: $font-bold;
+    &__title {
+        font-size: 2rem;
         font-weight: 700;
         color: $Dark-brown;
     }
 
-    .footer {
+    &__analitics {
         display: flex;
         justify-content: space-between;
-        margin-top: 1.95rem;
+        align-items: flex-end;
+        margin-top: 1.90rem;
 
-        &__total {
-            p {
-                font-size: 2.2222rem;
-                color: $Dark-brown;
-            }
+
+        &-total {
+            font-size: 0.9rem;
         }
 
-        &__lastmonth {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            padding-bottom: 0.27777rem;
-
-            p {
-                color: $Dark-brown;
-                text-align: end;
-            }
-
+        &-value {
+            font-size: 2.22rem;
+            font-weight: 700;
+            color: $Dark-brown;
         }
+
+        &-porcentual {
+
+            text-align: end;
+            color: $Dark-brown;
+            font-weight: 700;
+        }
+
+        &-period {
+            font-size: 0.9rem;
+            padding-bottom: 0.3rem;
+        }
+
     }
+
 }
 
 .graphic {
-    display: flex;
+    display: flex ;
+    width: 100%;
     justify-content: space-around;
     color: $Medium-brown;
     border-bottom: 1px solid $Cream;
@@ -108,25 +88,26 @@ main {
     margin-top: 1.111rem;
     padding-bottom: 1.111rem;
 
-    .barras{ 
+    .barras {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
         align-items: center;
 
-        &__amount{
+        &__amount {
             opacity: 0;
-            padding: 0.27777rem;
+            padding: 0.2rem;
             margin-bottom: 0.8333rem;
             border-radius: 0.2777rem;
-            color:white;
+            color: white;
             background-color: black;
-
-            &-activo{
+            
+            &-activo {
                 opacity: 1;
                 transform: scale(1.2);
             }
         }
+
         &__barra {
             cursor: pointer;
             position: relative;
@@ -135,14 +116,15 @@ main {
             overflow: hidden;
             margin-bottom: 0.5555rem;
 
-            &:hover::before{
+            &:hover::before {
+                
                 position: absolute;
-                z-index: 100 ;
+                z-index: 100;
                 background-color: lighten($Soft-red, 20%);
             }
-            
-            &::before{
-                content:"";
+
+            &::before {
+                content: "";
                 position: absolute;
                 left: 0;
                 width: 100%;
@@ -152,15 +134,15 @@ main {
                 animation: fill-bar 0.8s 0.3s ease-in-out forwards;
             }
 
-            &--dayActual:hover::before{
+            &--dayActual:hover::before {
                 position: absolute;
-                z-index: 100 ;
+                z-index: 100;
                 background-color: lighten($Cyan, 20%);
             }
 
             &--dayActual::before {
                 background-color: $Cyan;
-                content:"";
+                content: "";
                 position: absolute;
                 left: 0;
                 width: 100%;
@@ -169,21 +151,24 @@ main {
                 animation: fill-bar 0.8s 0.3s ease-in-out forwards;
             }
 
-            
+
         }
-       
+
     }
 
 }
 
-@media only screen and (min-width:360px) and (max-width: 768px) {
-
-    * {
-        font-size: 12px;
-    }
+@media only screen and (min-width:320px) and (max-width: 768px) {
 
     .container {
         width: 342px;
+    }
+
+    .chart {
+
+        &__title {
+            font-size: 1.5rem;
+        }
     }
 }
 

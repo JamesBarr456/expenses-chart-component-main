@@ -1,98 +1,94 @@
-/* Neutral */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
 /* --------         -------- */
-/* -------- Fuentes -------- */
-@font-face {
-  font-family: "DMSans-Regular";
-  src: url(../font/DMSans-Regular.ttf);
-  font-weight: 400;
-}
-@font-face {
-  font-family: "DMSans-Bold";
-  src: url(../font/DMSans-Bold.ttf);
-  font-weight: 700;
-}
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 18px;
 }
 
 body {
   height: 100vh;
+  font-family: "DM Sans", sans-serif;
+  background-color: hsl(33, 100%, 98%);
+  font-size: 18px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: hsl(33, 100%, 98%);
 }
 
-.title {
-  font-size: 0.8888rem;
-  font-family: "DMSans-Regular";
-  font-weight: 400;
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  body {
+    font-size: 12px;
+  }
 }
-.title--medium-brown {
-  color: hsl(28, 10%, 53%);
-}
-
-p {
-  font-family: "DMSans-Bold";
-  font-weight: 700;
-}
-
+/* --------         -------- */
 .container {
   width: 542px;
 }
 
-.header {
+.balance {
   display: flex;
   justify-content: space-between;
+  padding: 1.3rem;
   background-color: hsl(10, 79%, 65%);
-  border-radius: 1.111rem;
-  padding: 1.6666rem;
-  margin-bottom: 1.3888rem;
-  color: hsl(27, 66%, 92%);
+  border-radius: 0.555rem;
+  margin-bottom: 1.388rem;
 }
-.header__balance p {
-  font-size: 1.5rem;
-  margin-top: 0.8333rem;
+.balance__title {
+  color: hsl(33, 100%, 98%);
+  font-size: 0.9rem;
+}
+.balance__total {
+  color: hsl(33, 100%, 98%);
+  font-size: 1.7rem;
+  margin-top: 0.833rem;
+  font-weight: 700;
+}
+.balance__logo {
+  width: 4rem;
 }
 
-main {
+.chart {
   display: flex;
   flex-direction: column;
+  padding: 1.4rem;
+  color: hsl(28, 10%, 53%);
+  border-radius: 1.111rem;
   background-color: white;
-  border-radius: 1.1111rem;
-  padding: 1.6666rem;
 }
-main h1 {
-  font-size: 2.3333rem;
-  font-family: "DMSans-Bold";
+.chart__title {
+  font-size: 2rem;
   font-weight: 700;
   color: hsl(25, 47%, 15%);
 }
-main .footer {
+.chart__analitics {
   display: flex;
   justify-content: space-between;
-  margin-top: 1.95rem;
+  align-items: flex-end;
+  margin-top: 1.9rem;
 }
-main .footer__total p {
-  font-size: 2.2222rem;
+.chart__analitics-total {
+  font-size: 0.9rem;
+}
+.chart__analitics-value {
+  font-size: 2.22rem;
+  font-weight: 700;
   color: hsl(25, 47%, 15%);
 }
-main .footer__lastmonth {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding-bottom: 0.27777rem;
-}
-main .footer__lastmonth p {
-  color: hsl(25, 47%, 15%);
+.chart__analitics-porcentual {
   text-align: end;
+  color: hsl(25, 47%, 15%);
+  font-weight: 700;
+}
+.chart__analitics-period {
+  font-size: 0.9rem;
+  padding-bottom: 0.3rem;
 }
 
 .graphic {
   display: flex;
+  width: 100%;
   justify-content: space-around;
   color: hsl(28, 10%, 53%);
   border-bottom: 1px solid hsl(27, 66%, 92%);
@@ -108,7 +104,7 @@ main .footer__lastmonth p {
 }
 .graphic .barras__amount {
   opacity: 0;
-  padding: 0.27777rem;
+  padding: 0.2rem;
   margin-bottom: 0.8333rem;
   border-radius: 0.2777rem;
   color: white;
@@ -157,12 +153,12 @@ main .footer__lastmonth p {
   animation: fill-bar 0.8s 0.3s ease-in-out forwards;
 }
 
-@media only screen and (min-width: 360px) and (max-width: 768px) {
-  * {
-    font-size: 12px;
-  }
+@media only screen and (min-width: 320px) and (max-width: 768px) {
   .container {
     width: 342px;
+  }
+  .chart__title {
+    font-size: 1.5rem;
   }
 }
 @keyframes fill-bar {

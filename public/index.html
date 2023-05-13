@@ -13,17 +13,19 @@
 </head>
 
 <body>
-  <div class="container">
-    <div class="header">
-      <div class="header__balance">
-        <h2 class="title">My Balance</h2>
-        <p>$921.48</p>
+  <main class="container">
+
+    <!-- Header  -->
+    <div class="balance">
+      <div>
+        <p class="balance__title">My Balance</p>
+        <p class="balance__total">$921.48</p>
       </div>
-      <img src="./images/logo.svg" alt="logo">
+      <img class="balance__logo" src="./images/logo.svg" alt="logo">
     </div>
 
-    <main>
-      <h1>Spending - Last 7 days</h1>
+    <div class="chart">
+      <p class="chart__title">Spending - Last 7 days</p>
       <div class="graphic">
         <div class="barras">
           <p class="barras__amount"></p>
@@ -62,19 +64,22 @@
         </div>
 
       </div>
-      <div class="footer">
-        <div class="footer__total">
-          <h2 class="title title--medium-brown">Total this month</h2>
-          <p>$478.33</p>
+         <!-- Footer -->
+         <div class="chart__analitics">
+          <div>
+            <p class="chart__analitics-total">Total this month</p>
+            <p class="chart__analitics-value">$478.33</p>
+          </div>
+          <div>
+            <p class="chart__analitics-porcentual">+2.4%</p>
+            <p class="chart__analitics-period">from last month</p>
+          </div>
         </div>
-        <div class="footer__lastmonth">
-          <p>+2.4%</p>
-          <h2 class="title title--medium-brown">from last month</h2>
-        </div>
-      </div>
-  </div>
-  </div>
+    </div>
+  </main>
   <script type="module" src="./script.js"></script>
 </body>
 
 </html>
+
+<!-- sass src/main.scss public/css/main.css -w -->

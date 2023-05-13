@@ -20,6 +20,8 @@ This is a solution to the [Expenses chart component challenge on Frontend Mentor
 
 ## Overview
 
+Hello Everyone, This is my solution to the frontend mentor challenge "Result Summary Component", and Special thanks to frontend mentor! I am grateful for this oppotunity to learn!
+
 ### The challenge
 
 Users should be able to:
@@ -51,16 +53,10 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+- HTML5 
+- SASS
+- JavasScript
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
@@ -101,11 +97,9 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Github:  [Barreto Santiago Emmanuel](https://github.com/JamesBarr456)
+- Frotend Mentor:  [@JamesBarr456](https://www.frontendmentor.io/profile/JamesBarr456)
+- Instagram: [@barretoemmanuel](https://www.instagram.com/barretoemmanuel/)
 
 ## Acknowledgments
 
