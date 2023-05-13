@@ -37,7 +37,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Solution URL](https://github.com/JamesBarr456/expenses-chart-component-main/tree/main)
-- Live Site URL: [live Site URL](https://645ed4e500a4715fd417e104--resonant-pasca-26b0e5.netlify.app/)
+- Live Site URL: [live Site URL](https://645ee763fe863467fcd4fedd--deluxe-alpaca-9c16d1.netlify.app/)
 
 
 ### Built with
